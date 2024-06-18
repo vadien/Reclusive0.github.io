@@ -1,14 +1,34 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #242424;
-  color: rgb(204, 204, 204);
+  background-color: #f6f6f6;
+  color: #000000;
   text-align: center;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Courier New", Courier, monospace;
 }
 
-h1 {
-  padding-top: 30vh;
+main {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.menu:hover > .menu-item {
+  opacity: 0.3;
+}
+
+.menu:hover > .menu-item:hover {
+  opacity: 1;
+}
+
+.menu-item {
+  color: #000000;
+  font-size: 8vw;
+  display: block;
+  text-decoration: none;
+  padding: 0.5vw;
+  margin-left: 20vw;
+  transition: opacity 400ms ease;
 }
 
 /*# sourceMappingURL=style.css.map */
