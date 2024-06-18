@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -7,28 +11,93 @@ body {
   font-family: "Courier New", Courier, monospace;
 }
 
-main {
+.body-dark-mode {
+  color: #f6f6f6;
+  background-color: #000000;
+}
+
+.light {
+  color: #000000;
+}
+
+.dark {
+  color: #f6f6f6;
+}
+
+#navbar {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  font-size: 3vw;
+  opacity: 0;
+}
+
+.nav-size {
+  font-size: inherit;
+}
+
+nav > ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav li {
+  list-style: none;
+}
+
+nav a {
+  color: #000000;
+}
+
+#top-menu {
   height: 100vh;
   display: flex;
   align-items: center;
 }
 
-.menu:hover > .menu-item {
+#menu:hover > .menu-item {
   opacity: 0.3;
 }
 
-.menu:hover > .menu-item:hover {
+#menu:hover > .menu-item:hover {
   opacity: 1;
 }
 
 .menu-item {
-  color: #000000;
+  color: inherit;
   font-size: 8vw;
   display: block;
   text-decoration: none;
   padding: 0.5vw;
   margin-left: 20vw;
   transition: opacity 400ms ease;
+  text-align: left;
+}
+
+.dark-toggle {
+  border: none;
+  background-color: inherit;
+  font-family: inherit;
+}
+
+.page {
+  min-height: 80vh;
+  display: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 30%;
+}
+
+.text {
+  padding: 0 10%;
+}
+
+.page-alt {
+  background-color: #dddddd;
+}
+
+.page-alt-dark {
+  background-color: #121212;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -5,16 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>David Neill</title>
     <link rel="stylesheet" href="../styles/style.css" />
+    <script src="../scripts/script.js" defer></script>
   </head>
   <body>
     <main>
-      <div class="menu">
-        <a href="#" class="menu-item">me</a>
-        <a href="#" class="menu-item">my skills</a>
-        <a href="#" class="menu-item">my work</a>
-        <a href="#" class="menu-item">my eyes!</a>
+      <nav id="navbar">
+        <ul>
+          <li><a href="#me">me</a></li>
+          <li><a href="#skills">my skills</a></li>
+          <li><a href="#work">my work</a></li>
+          <li>
+            <button class="dark-toggle nav-size" onclick="darkToggle()">
+              my eyes!
+            </button>
+          </li>
+        </ul>
+      </nav>
+      <div id="top-menu">
+        <div id="menu" class="light">
+          <a href="#me" class="menu-item">me</a>
+          <a href="#skills" class="menu-item">my skills</a>
+          <a href="#work" class="menu-item">my work</a>
+          <button class="menu-item dark-toggle" onclick="darkToggle()">
+            my eyes!
+          </button>
+        </div>
+      </div>
+      <div id="me" class="page page-alt">
+        <h1 class="title">hi.</h1>
+        <p class="text">
+          I'm David, a junior developer currently based in Sydney. I'm currently
+          part of a brilliant course taking me from almost zero to coding hero!
+        </p>
+      </div>
+      <div id="skills" class="page">
+        <h1 class="title">skills</h1>
+        <p class="text">
+          Work with HTML, CSS, JavaScript, or git? Then I can work with you.
+        </p>
+      </div>
+      <div id="work" class="page page-alt">
+        <h1 class="title">work</h1>
+        <p class="text">
+          Here you'll find what I've been working on recently, both as part of
+          my work with Nology and personal side projects.
+        </p>
       </div>
     </main>
   </body>
-  <footer>© David Neill 2024</footer>
+  <footer>Site by me</footer>
 </html>
