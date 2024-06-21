@@ -1,18 +1,17 @@
 const body = document.body;
-const me = document.getElementById("me");
-const work = document.getElementById("work");
-const links = document.querySelectorAll(".ext-link");
+const links = document.querySelectorAll(".link");
+const navBar = document.querySelector(".navbar");
 
-console.log(links);
+// Toggle dark mode
 function darkToggle() {
   body.classList.toggle("body--dark");
+  navBar.classList.toggle("navbar--dark");
   links.forEach((e) => {
-    e.classList.toggle("ext-link--dark");
+    e.classList.toggle("link--dark");
   });
 }
 
-let scrollPosition = 0;
-var navBar = document.querySelector(".navbar");
+// Navbar fade in/out
 navBar.style.transition = "opacity 0.66s";
 
 function navbarAppear() {

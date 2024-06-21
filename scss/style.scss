@@ -35,6 +35,10 @@ html {
   font-size: clamp(1rem, 2vw, 3rem);
   background-color: $off-white;
   opacity: 1;
+  &--dark {
+    background-color: $off-black;
+    color: $off-white;
+  }
 }
 
 .nav-list {
@@ -51,6 +55,7 @@ html {
   font-size: 3vw;
   border: none;
   background-color: inherit;
+  color: inherit;
 }
 
 .img-me {
@@ -79,6 +84,7 @@ html {
   }
   &--footer {
     font-size: clamp(1rem, 2vw, 3rem);
+    padding: 0;
   }
 }
 

@@ -32,6 +32,10 @@ html {
   background-color: #f6f6f6;
   opacity: 1;
 }
+.navbar--dark {
+  background-color: #101010;
+  color: #f6f6f6;
+}
 
 .nav-list {
   display: flex;
@@ -47,6 +51,7 @@ html {
   font-size: 3vw;
   border: none;
   background-color: inherit;
+  color: inherit;
 }
 
 .img-me {
@@ -76,6 +81,7 @@ html {
 }
 .text--footer {
   font-size: clamp(1rem, 2vw, 3rem);
+  padding: 0;
 }
 
 .link {
