@@ -1,25 +1,42 @@
+// For Inter font.
+:root {
+  font-family: Inter, sans-serif;
+  font-feature-settings: "liga" 1, "calt" 1; /* fix for Chrome */
+}
+@supports (font-variation-settings: normal) {
+  :root {
+    font-family: InterVariable, sans-serif;
+  }
+}
+
+$off-black: #101010;
+$off-white: #f6f6f6;
+
 html {
   scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
 }
+
 body {
   margin: 0;
   padding: 0;
-  background-color: #f6f6f6;
-  color: #000000;
+  background-color: $off-white;
+
+  color: $off-black;
   text-align: center;
-  font-family: "Courier New", Courier, monospace;
 }
 .body-dark-mode {
-  color: #f6f6f6;
-  background-color: #000000;
+  color: $off-white;
+  background-color: $off-black;
 }
 
 .light {
-  color: #000000;
+  color: $off-black;
 }
 
 .dark {
-  color: #f6f6f6;
+  color: $off-white;
 }
 
 #navbar {
@@ -27,21 +44,29 @@ body {
   top: 0;
   width: 100vw;
   font-size: 3vw;
-  opacity: 0;
+  background-color: $off-white;
+  opacity: 1;
 }
+
 .nav-size {
   font-size: inherit;
+  &--dark {
+    color: $off-white;
+  }
+  &--icon {
+    font-size: 3vw;
+  }
 }
 nav > ul {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 nav li {
   list-style: none;
 }
 nav a {
-  color: #000000;
+  color: $off-black;
 }
 
 #top-menu {
@@ -59,13 +84,19 @@ nav a {
 
 .menu-item {
   color: inherit;
-  font-size: 8vw;
+  font-size: 12vw;
   display: block;
   text-decoration: none;
   padding: 0.5vw;
   margin-left: 20vw;
   transition: opacity 400ms ease;
   text-align: left;
+}
+
+.img-me {
+  width: 300px;
+  border-radius: 50%;
+  box-shadow: 5px 5px 50px 0px rgba(0, 0, 0, 0.2);
 }
 
 .dark-toggle {
@@ -79,16 +110,63 @@ nav a {
   display: column;
   align-items: center;
   justify-content: center;
-  padding-top: 30%;
+  padding-top: 15%;
 }
 .text {
   padding: 0 10%;
+  font-size: clamp(1rem, 4vw, 3rem);
+  &--bold {
+    font-weight: bold;
+  }
 }
 
-.page-alt {
-  background-color: #dddddd;
+// .page-alt {
+//   background-color: $off-black;
+// }
+
+// .page-alt-dark {
+//   background-color: $off-black;
+//   color: $off-white;
+// }
+
+.ext-link {
+  color: $off-black;
+  &--icon {
+    font-size: 12vw;
+    text-decoration: none;
+  }
+  &--dark {
+    color: $off-white;
+  }
 }
 
-.page-alt-dark {
-  background-color: #121212;
+.ext-link:visited {
+  color: $off-black;
+}
+.ext-link--dark:visited {
+  color: $off-white;
+}
+.footer {
+  display: flex;
+  justify-content: center;
+  gap: 10%;
+  padding-top: 4%;
+  padding-bottom: 4%;
+}
+
+.footer:hover > .ext-link--icon {
+  opacity: 0.3;
+}
+.footer:hover > .ext-link--icon:hover {
+  opacity: 1;
+}
+.footer-text {
+  font-size: 4vw;
+}
+
+.icon-display {
+  font-size: 12vw;
+  display: flex;
+  justify-content: center;
+  gap: 5%;
 }
