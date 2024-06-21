@@ -39,7 +39,7 @@ body {
   position: fixed;
   top: 0;
   width: 100vw;
-  font-size: 3vw;
+  font-size: clamp(1rem, 2vw, 3rem);
   background-color: #f6f6f6;
   opacity: 1;
 }
@@ -73,23 +73,12 @@ nav a {
   align-items: center;
 }
 
-#menu:hover > .menu-item {
-  opacity: 0.3;
-}
-
-#menu:hover > .menu-item:hover {
-  opacity: 1;
-}
-
-.menu-item {
+.toggle-item {
   color: inherit;
-  font-size: 12vw;
-  display: block;
+  font-size: 4vw;
   text-decoration: none;
   padding: 0.5vw;
-  margin-left: 20vw;
-  transition: opacity 400ms ease;
-  text-align: left;
+  opacity: 0.3;
 }
 
 .img-me {
@@ -106,7 +95,8 @@ nav a {
 
 .page {
   min-height: 80vh;
-  display: column;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   padding-top: 15%;
@@ -139,7 +129,7 @@ nav a {
   color: #f6f6f6;
 }
 
-.footer {
+.biz-links {
   display: flex;
   justify-content: center;
   gap: 10%;
@@ -147,16 +137,16 @@ nav a {
   padding-bottom: 4%;
 }
 
-.footer:hover > .ext-link--icon {
+.biz-links:hover > .ext-link--icon {
   opacity: 0.3;
 }
 
-.footer:hover > .ext-link--icon:hover {
+.biz-links:hover > .ext-link--icon:hover {
   opacity: 1;
 }
 
 .footer-text {
-  font-size: 4vw;
+  font-size: clamp(1rem, 2vw, 3rem);
 }
 
 .icon-display {
@@ -164,6 +154,48 @@ nav a {
   display: flex;
   justify-content: center;
   gap: 5%;
+}
+
+.project-cards {
+  display: grid;
+  gap: 20px;
+}
+
+.work-card {
+  display: grid;
+  grid-template-columns: 38% 2% 1fr;
+  max-width: 80vw;
+  background-color: #101010;
+  color: #f6f6f6;
+  border-radius: 6px;
+  min-height: 15vh;
+  box-shadow: 5px 5px 50px 0px rgba(0, 0, 0, 0.2);
+}
+
+.card-img {
+  align-self: center;
+}
+
+.card-text {
+  border-radius: 6px;
+  background-color: #222222;
+  display: grid;
+  padding: 4px;
+}
+.card-text--title {
+  font-weight: 700;
+}
+.card-text--content {
+  justify-self: center;
+  font-weight: 300;
+}
+.card-text--links {
+  display: flex;
+  justify-content: space-around;
+}
+
+footer {
+  margin: 0 5vw 2vh 5vw;
 }
 
 /*# sourceMappingURL=style.css.map */

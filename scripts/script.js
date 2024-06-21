@@ -1,12 +1,11 @@
 const body = document.body;
-const menu = document.getElementById("menu");
 const me = document.getElementById("me");
 const work = document.getElementById("work");
 const links = document.querySelectorAll(".ext-link");
 
+console.log(links);
 function darkToggle() {
   body.classList.toggle("body-dark-mode");
-  menu.classList.toggle("dark");
   links.forEach((e) => {
     e.classList.toggle("ext-link--dark");
   });
@@ -14,7 +13,6 @@ function darkToggle() {
 
 let scrollPosition = 0;
 var navBar = document.getElementById("navbar");
-console.log(navBar);
 navBar.style.transition = "opacity 1s";
 
 function navbarAppear() {
