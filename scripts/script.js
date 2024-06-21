@@ -12,15 +12,15 @@ function darkToggle() {
 }
 
 let scrollPosition = 0;
-var navBar = document.getElementById("navbar");
-navBar.style.transition = "opacity 1s";
+var navBar = document.querySelector(".navbar");
+navBar.style.transition = "opacity 0.66s";
 
 function navbarAppear() {
-  if (window.scrollY > 600) {
-    navBar.style.opacity = 1;
-  } else {
+  if (window.scrollY < 600) {
     navBar.style.opacity = 0;
+  } else {
+    navBar.style.opacity = 1;
   }
 }
-
+navbarAppear();
 document.addEventListener("scroll", () => navbarAppear());
