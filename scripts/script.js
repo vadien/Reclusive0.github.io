@@ -5,7 +5,7 @@ const links = document.querySelectorAll(".ext-link");
 
 console.log(links);
 function darkToggle() {
-  body.classList.toggle("body-dark-mode");
+  body.classList.toggle("body--dark");
   links.forEach((e) => {
     e.classList.toggle("ext-link--dark");
   });

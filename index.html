@@ -10,30 +10,28 @@
     <link rel="preconnect" href="https://rsms.me/" />
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
   </head>
-  <body>
+  <body class="body">
     <main>
-      <nav id="navbar">
-        <ul>
-          <li><a href="#me">me</a></li>
-          <li><a href="#skills">my skills</a></li>
-          <li><a href="#work">my work</a></li>
-          <li>
-            <button
-              class="dark-toggle nav-size nav-size--icon"
-              onclick="darkToggle()"
-            >
+      <nav class="navbar">
+        <ul class="nav-list">
+          <li class="list-item"><a class="link" href="#me">me</a></li>
+          <li class="list-item"><a class="link" href="#work">my work</a></li>
+          <li class="list-item">
+            <a class="link" href="#skills">my skills</a>
+          </li>
+          <li class="list-item">
+            <button class="dark-toggle" onclick="darkToggle()">
               <i class="ph ph-sunglasses"></i>
             </button>
           </li>
         </ul>
       </nav>
       <div id="me" class="page">
-        <h1 class="title">>whoami</h1>
+        <h1 class="text text--title">>whoami</h1>
         <p class="text">
-          I'm David, a junior developer based in Sydney. I'm currently part of
-          <a href="https://au.nology.io" class="ext-link">
-            a brilliant course</a
-          >
+          I'm David Neill, a junior developer based in Sydney. I'm currently
+          part of
+          <a href="https://au.nology.io" class="link"> a brilliant course</a>
           taking me from almost zero to coding hero!
         </p>
 
@@ -43,68 +41,67 @@
           class="img-me"
         />
         <div class="biz-links">
-          <a
-            href="https://github.com/Reclusive0"
-            class="ext-link ext-link--icon"
+          <a href="https://github.com/Reclusive0" class="link link--icon"
             ><i class="ph ph-github-logo"></i
           ></a>
           <a
             href="https://www.linkedin.com/in/david-neill-20a636218/"
-            class="ext-link ext-link--icon"
+            class="link link--icon"
             ><i class="ph ph-linkedin-logo"></i
           ></a>
         </div>
       </div>
 
       <div id="work" class="page">
-        <h1 class="title">>ls ./projects</h1>
+        <h1 class="text text--title">>ls ./work</h1>
         <p class="text">
           Here you'll find what I've been working on recently and what's soon to
           come, both from my work at _nology and personal projects.
         </p>
-        <div class="project-cards">
+        <div class="work-cards-container">
           <div class="work-card">
             <div class="card-img">Coming soon!</div>
             <div></div>
             <div class="card-text">
-              <div class="card-text card-text--title">Placeholder title</div>
+              <div class="card-text card-text--title">"FakeOS"</div>
               <div class="card-text card-text--content">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est,
-                nihil libero.
+                A responsive simulation of the Mac OS desktop experience using
+                HTML, CSS and vanilla JS.
               </div>
               <div class="card-text card-text--links">
-                <a href="#" class="ext-link--dark">Live</a
-                ><a href="#" class="ext-link--dark">Code</a>
+                <a href="#" class="link--dark">Live</a>
+                <a href="#" class="link--dark">Code</a>
               </div>
             </div>
           </div>
+
           <div class="work-card">
             <div class="card-img">Coming soon!</div>
             <div></div>
             <div class="card-text">
-              <div class="card-text card-text--title">Placeholder title</div>
+              <div class="card-text card-text--title">eShop</div>
               <div class="card-text card-text--content">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est,
-                nihil libero.
+                A dynamic and functional simulation of an eCommerce site using
+                React and Firestore.
               </div>
               <div class="card-text card-text--links">
-                <a href="#" class="ext-link--dark">Live</a
-                ><a href="#" class="ext-link--dark">Code</a>
+                <a href="#" class="link--dark">Live</a
+                ><a href="#" class="link--dark">Code</a>
               </div>
             </div>
           </div>
+
           <div class="work-card">
             <div class="card-img">Coming soon!</div>
             <div></div>
             <div class="card-text">
-              <div class="card-text card-text--title">Placeholder title</div>
+              <div class="card-text card-text--title">Easy To-Do List</div>
               <div class="card-text card-text--content">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est,
-                nihil libero.
+                A bespoke task list app with API integration.
               </div>
               <div class="card-text card-text--links">
-                <a href="#" class="ext-link--dark">Live</a
-                ><a href="#" class="ext-link--dark">Code</a>
+                <a href="#" class="link--dark">Live</a
+                ><a href="#" class="link--dark">Code</a>
               </div>
             </div>
           </div>
@@ -112,14 +109,14 @@
       </div>
 
       <div id="skills" class="page">
-        <h1 class="title">>ls ./skills</h1>
+        <h1 class="text text--title">>ls ./skills</h1>
         <p class="text">
           Work with <span class="text--bold">HTML</span>,
           <span class="text--bold">CSS</span>,
           <span class="text--bold">Javascript</span>, or
           <span class="text--bold">Git</span>? Then I can work with you.
         </p>
-        <div class="icon-display">
+        <div class="link--icon">
           <i class="ph ph-file-html"></i><i class="ph ph-file-css"></i
           ><i class="ph ph-file-js"></i><i class="ph ph-git-branch"></i>
         </div>
@@ -127,11 +124,11 @@
     </main>
   </body>
   <footer>
-    <span class="footer-text">
+    <span class="text text--footer">
       Built by me using
-      <a href="https://sass-lang.com" class="ext-link">Sass</a>, icons by
-      <a href="https://phosphoricons.com/" class="ext-link">Phosphoricons</a>,
-      font by <a href="https://rsms.me/inter/" class="ext-link">Inter</a>
+      <a href="https://sass-lang.com" class="link">Sass</a>, icons by
+      <a href="https://phosphoricons.com/" class="link">Phosphoricons</a>, font
+      by <a href="https://rsms.me/inter/" class="link">Inter</a>
     </span>
   </footer>
 </html>
