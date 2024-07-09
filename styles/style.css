@@ -111,14 +111,6 @@ html {
   padding-bottom: 4%;
 }
 
-.biz-links:hover > .link--icon {
-  opacity: 0.3;
-}
-
-.biz-links:hover > .link--icon:hover {
-  opacity: 1;
-}
-
 .work-cards-container {
   display: grid;
   gap: 20px;
