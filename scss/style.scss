@@ -126,7 +126,7 @@ html {
   background-color: $off-black;
   color: $off-white;
   border-radius: 12px;
-  min-height: 15vh;
+  height: clamp(15vh, 20vh, 70px);
   border: 1px solid $off-white;
   box-shadow: 5px 5px 50px 0px rgba(0, 0, 0, 0.4);
 }
@@ -155,4 +155,8 @@ html {
 
 footer {
   margin: 0 5vw 2vh 5vw;
+}
+
+.work-card-image {
+  object-fit: cover;
 }
